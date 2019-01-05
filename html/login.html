@@ -2,14 +2,32 @@
 <html lang="en">
     <head>
         <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-        <link href="/static/css/bootstrap.min.css" rel="stylesheet">
-        <link href="/static/css/custom.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
         <title>Techraptor Control</title>
     </head>
     <body>
-
-        <script src="/static/js/jquery-3.2.1.min.js"></script>
-        <script src="/static/js/popper.min.js"></script>
-        <script src="/static/js/bootstrap.min.js"></script>
+        <div class="container-fluid">
+            <div class="container h-100">
+                <div class="row justify-content-center align-self-center" style="height: 50vh">
+                    <div class="card align-self-center">
+                        <h2 class="card-header">Sign In</h2>
+                        <div class="card-block">
+                            <form class="card-text p-3" method="post" id="signin">
+                                <label for="inputUsername" class="sr-only">Username</label>
+                                <input id="inputUsername" type="text" name="username" class="form-control m-1" placeholder="Username" required maxlength="254">
+                                <label for="inputPassword" class="sr-only">Password</label>
+                                <input id="inputPassword" type="password" name="password" class="form-control m-1" placeholder="Password" required>
+                                <a href="/password_reset/" class="float-right m-2">Forgot password?</a>
+                                <div class="checkbox float-left m-2"><label><input type="checkbox" value="remember-me"> Remember me</label></div>
+                                <input class="btn btn-lg btn-primary btn-block" type="submit" value="Sign In">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     </body>
 </html>
