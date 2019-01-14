@@ -40,7 +40,8 @@ def refresh_users():
         USERS = {}
         for row in reader(_in, delimiter=':'):
             name = row[4].split(',')
-            USERS[row[0]] = {'home': row[5], 'terminal': row[6], 'username': row[0], 'name': name[0], 'room': name[1], 'office phone': name[2], 'home phone': name[3], 'other': name[4:]}
+            l_name = len(name)
+            USERS[row[0]] = {'home': row[5], 'terminal': row[6], 'username': row[0], 'name': name[0], 'room': name[1] if l_name > 1 else '', 'office phone': name[2] if l_name > 2 else '', 'home phone': name[3] if l_name > 3 else '', 'other': name[4:]}
         USER_GROUPS = {u: set() for u in USERS}
     with open('/etc/group') as _in:
         GROUPS = {}
